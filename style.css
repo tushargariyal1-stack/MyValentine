@@ -1,0 +1,74 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    transition: background 1s ease;
+}
+
+body.celebrate-bg {
+    background: radial-gradient(circle, #ff4d6d, #ff758c, #ffafbd);
+}
+
+.main-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 30px;
+    border-radius: 40px;
+    text-align: center;
+    max-width: 380px;
+    width: 90%;
+    z-index: 10;
+}
+
+.image-wrapper img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 20px;
+}
+
+.title { font-family: 'Dancing Script', cursive; font-size: 35px; color: white; }
+
+#main-question { color: #fff; font-size: 22px; margin-bottom: 25px; }
+
+/* Buttons layout fix */
+.yes-area { margin-bottom: 60px; } /* YES ke niche gap */
+
+button { 
+    padding: 15px 40px; 
+    font-size: 18px; 
+    border-radius: 50px; 
+    border: none; 
+    cursor: pointer; 
+    font-weight: 700;
+}
+
+#yesBtn { background: #ff4d6d; color: white; box-shadow: 0 5px 15px rgba(255,77,109,0.3); }
+
+#noBtn { 
+    background: #fff; 
+    color: #ff4d6d; 
+    position: relative; 
+    z-index: 100;
+    transition: 0.1s;
+}
+
+.hidden { display: none; }
+
+.victory-text { font-family: 'Dancing Script', cursive; font-size: 45px; color: white; }
+.love-text { font-size: 28px; color: white; font-weight: 700; margin-top: 10px; }
+
+.heart { position: absolute; color: white; animation: float 5s linear infinite; pointer-events: none; }
+@keyframes float {
+    0% { transform: translateY(110vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
+}
